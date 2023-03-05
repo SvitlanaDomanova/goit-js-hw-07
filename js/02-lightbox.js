@@ -10,7 +10,7 @@ new SimpleLightbox(".gallery a", {
 });
 
 const markup = galleryItems.map(
-        ({original, preview, description}) => `<a class="gallery__item" href="${original}">
+        ({preview, original, description}) => `<a class="gallery__item" href="${original}">
         <img class="gallery__image" src="${preview}" alt="${description}" />
       </a>`   
     )
