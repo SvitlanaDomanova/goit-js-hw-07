@@ -4,10 +4,6 @@ console.log(galleryItems);
 
 const galleryEl = document.querySelector(".gallery");
 
-new SimpleLightbox(".gallery a", {
-    captionsData: "alt",
-    captionDelay: 250,
-});
 
 const markup = galleryItems.map(
         ({preview, original, description}) => `<a class="gallery__item" href="${original}">
@@ -17,3 +13,8 @@ const markup = galleryItems.map(
     .join("");
 
 galleryEl.insertAdjacentHTML("beforeend", markup);
+
+new SimpleLightbox(".gallery a", {
+    captionsData: "alt",
+    captionDelay: 250,
+});
